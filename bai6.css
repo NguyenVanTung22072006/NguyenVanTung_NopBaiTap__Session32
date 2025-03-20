@@ -1,0 +1,27 @@
+body {
+    text-align: center;
+    margin-top: 50px;
+}
+.container {
+    display: inline-block;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background: #f9f9f9;
+}
+.btn {
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.increase {
+    background-color: #4CAF50;
+    color: white;
+}
+.decrease {
+    background-color: #E74C3C;
+    color: white;
+}

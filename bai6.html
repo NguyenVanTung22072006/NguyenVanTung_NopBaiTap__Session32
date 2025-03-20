@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thay đổi kích thước chữ</title>
+    <link rel="stylesheet" href="bai6.css">
+</head>
+<body>
+    <div class="container">
+        <p id="text">Chữ sẽ thay đổi kích thước khi bấm nút</p>
+        <button class="btn increase" onclick="increaseFontSize()">+</button>
+        <button class="btn decrease" onclick="decreaseFontSize()">-</button>
+    </div>
+    <script>
+        let textElement = document.getElementById("text");
+        let currentSize = 20;
+        function increaseFontSize() {
+            currentSize += 2; 
+            textElement.style.fontSize = currentSize + "px";
+        }
+        function decreaseFontSize() {
+            if (currentSize > 10) {
+                currentSize -= 2;
+                textElement.style.fontSize = currentSize + "px";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra email hợp lệ</title>
+</head>
+<body>
+    <input type="text" id="emailInput" placeholder="Nhập email của bạn"><br><br>
+    <button onclick="checkEmail()">Check</button>
+    <p id="result"></p>
+
+    <script>
+        function checkEmail() {
+            let email = document.getElementById("emailInput").value;
+            let result = document.getElementById("result");
+            
+            let hasAtSymbol = email.includes("@");
+            let validEnding = email.endsWith(".com") || email.endsWith(".vn");
+            
+            if (hasAtSymbol && validEnding) {
+                result.textContent = "Email hợp lệ!";
+                result.style.color = "green";
+            } else {
+                result.textContent = "Email không hợp lệ!";
+                result.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
